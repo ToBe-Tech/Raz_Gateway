@@ -1,0 +1,712 @@
+.
+|-- -p
+|-- DigiCertGlobalRootCA.pem
+|-- build
+|   |-- CMakeCache.txt
+|   |-- CMakeFiles
+|   |   |-- 3.29.0-rc1
+|   |   |   |-- CMakeASMCompiler.cmake
+|   |   |   |-- CMakeCCompiler.cmake
+|   |   |   |-- CMakeCXXCompiler.cmake
+|   |   |   |-- CMakeSystem.cmake
+|   |   |   |-- CompilerIdASM
+|   |   |   |-- CompilerIdC
+|   |   |   `-- CompilerIdCXX
+|   |   |-- CMakeConfigureLog.yaml
+|   |   |-- TargetDirectories.txt
+|   |   |-- app.dir
+|   |   |   `-- src
+|   |   |-- clean_additional.cmake
+|   |   |-- cmake.check_cache
+|   |   |-- d
+|   |   |-- guiconfig-0b59bc5.bat
+|   |   |-- hardenconfig-9a95698.bat
+|   |   |-- menuconfig-5f29641.bat
+|   |   |-- pkgRedirects
+|   |   `-- rules.ninja
+|   |-- Kconfig
+|   |   |-- Kconfig.modules
+|   |   |-- Kconfig.shield
+|   |   `-- Kconfig.shield.defconfig
+|   |-- app
+|   |   `-- libapp.a
+|   |-- build.ninja
+|   |-- cmake_install.cmake
+|   |-- compile_commands.json
+|   |-- image_preload.cmake
+|   |-- mcuboot
+|   |   |-- CMakeCache.txt
+|   |   |-- CMakeFiles
+|   |   |   |-- 3.29.0-rc1
+|   |   |   |-- CMakeConfigureLog.yaml
+|   |   |   |-- TargetDirectories.txt
+|   |   |   |-- app.dir
+|   |   |   |-- clean_additional.cmake
+|   |   |   |-- cmake.check_cache
+|   |   |   |-- d
+|   |   |   |-- guiconfig-0b59bc5.bat
+|   |   |   |-- hardenconfig-9a95698.bat
+|   |   |   |-- menuconfig-5f29641.bat
+|   |   |   |-- pkgRedirects
+|   |   |   `-- rules.ninja
+|   |   |-- Kconfig
+|   |   |   |-- Kconfig.modules
+|   |   |   |-- Kconfig.shield
+|   |   |   `-- Kconfig.shield.defconfig
+|   |   |-- app
+|   |   |   `-- libapp.a
+|   |   |-- build.ninja
+|   |   |-- child_image_preload.cmake
+|   |   |-- cmake_install.cmake
+|   |   |-- compile_commands.json
+|   |   |-- modules
+|   |   |   |-- CANopenNode
+|   |   |   |-- TraceRecorder
+|   |   |   |-- cddl-gen
+|   |   |   |-- civetweb
+|   |   |   |-- cjson
+|   |   |   |-- cmsis
+|   |   |   |-- connectedhomeip
+|   |   |   |-- fatfs
+|   |   |   |-- hal_nordic
+|   |   |   |-- libmetal
+|   |   |   |-- littlefs
+|   |   |   |-- loramac-node
+|   |   |   |-- lvgl
+|   |   |   |-- lz4
+|   |   |   |-- mbedtls
+|   |   |   |-- mcuboot
+|   |   |   |-- memfault-firmware-sdk
+|   |   |   |-- mipi-sys-t
+|   |   |   |-- nanopb
+|   |   |   |-- nrf
+|   |   |   |-- nrf_hw_models
+|   |   |   |-- nrfxlib
+|   |   |   |-- open-amp
+|   |   |   |-- openthread
+|   |   |   |-- segger
+|   |   |   |-- st
+|   |   |   |-- tinycbor
+|   |   |   |-- tinycrypt
+|   |   |   |-- trusted-firmware-m
+|   |   |   `-- zscilib
+|   |   |-- shared_vars.cmake
+|   |   |-- zephyr
+|   |   |   |-- CMakeFiles
+|   |   |   |-- arch
+|   |   |   |-- autogen-pubkey.c
+|   |   |   |-- boards
+|   |   |   |-- cmake
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- dev_handles.c
+|   |   |   |-- drivers
+|   |   |   |-- dts.cmake
+|   |   |   |-- edt.pickle
+|   |   |   |-- include
+|   |   |   |-- isrList.bin
+|   |   |   |-- isr_tables.c
+|   |   |   |-- kconfig
+|   |   |   |-- kernel
+|   |   |   |-- lib
+|   |   |   |-- libzephyr.a
+|   |   |   |-- linker.cmd
+|   |   |   |-- linker.cmd.dep
+|   |   |   |-- linker_zephyr_pre0.cmd
+|   |   |   |-- linker_zephyr_pre0.cmd.dep
+|   |   |   |-- linker_zephyr_pre1.cmd
+|   |   |   |-- linker_zephyr_pre1.cmd.dep
+|   |   |   |-- misc
+|   |   |   |-- runners.yaml
+|   |   |   |-- soc
+|   |   |   |-- subsys
+|   |   |   |-- zephyr.bin
+|   |   |   |-- zephyr.dts
+|   |   |   |-- zephyr.dts.d
+|   |   |   |-- zephyr.dts.pre
+|   |   |   |-- zephyr.elf
+|   |   |   |-- zephyr.hex
+|   |   |   |-- zephyr.lst
+|   |   |   |-- zephyr.map
+|   |   |   |-- zephyr.meta
+|   |   |   |-- zephyr.stat
+|   |   |   |-- zephyr_pre0.elf
+|   |   |   |-- zephyr_pre0.map
+|   |   |   |-- zephyr_pre1.elf
+|   |   |   `-- zephyr_pre1.map
+|   |   |-- zephyr_modules.txt
+|   |   `-- zephyr_settings.txt
+|   |-- modules
+|   |   |-- CANopenNode
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- TraceRecorder
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- cddl-gen
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- civetweb
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- cjson
+|   |   |   |-- CMakeFiles
+|   |   |   |-- cmake_install.cmake
+|   |   |   `-- libcjson.a
+|   |   |-- cmsis
+|   |   |   |-- CMSIS
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- connectedhomeip
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- fatfs
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- hal_nordic
+|   |   |   |-- CMakeFiles
+|   |   |   |-- cmake_install.cmake
+|   |   |   `-- nrfx
+|   |   |-- libmetal
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- littlefs
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- loramac-node
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- lvgl
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- lz4
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- mbedtls
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- mcuboot
+|   |   |   |-- CMakeFiles
+|   |   |   |-- boot
+|   |   |   |-- cmake_install.cmake
+|   |   |   `-- mcuboot_subimage-prefix
+|   |   |-- memfault-firmware-sdk
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- mipi-sys-t
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- nanopb
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- nrf
+|   |   |   |-- CMakeFiles
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- drivers
+|   |   |   |-- ext
+|   |   |   |-- lib
+|   |   |   |-- modules
+|   |   |   |-- samples
+|   |   |   |-- subsys
+|   |   |   `-- tests
+|   |   |-- nrf_hw_models
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- nrfxlib
+|   |   |   |-- CMakeFiles
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- nrf_802154
+|   |   |   `-- nrfxlib
+|   |   |-- open-amp
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- openthread
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- segger
+|   |   |   |-- CMakeFiles
+|   |   |   |-- cmake_install.cmake
+|   |   |   `-- libmodules__segger.a
+|   |   |-- st
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- tinycbor
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   |-- tinycrypt
+|   |   |   |-- CMakeFiles
+|   |   |   |-- cmake_install.cmake
+|   |   |   `-- lib
+|   |   |-- trusted-firmware-m
+|   |   |   |-- CMakeFiles
+|   |   |   `-- cmake_install.cmake
+|   |   `-- zscilib
+|   |       |-- CMakeFiles
+|   |       `-- cmake_install.cmake
+|   |-- partitions.yml
+|   |-- pm.config
+|   |-- regions.yml
+|   |-- spm
+|   |   |-- CMakeCache.txt
+|   |   |-- CMakeFiles
+|   |   |   |-- 3.29.0-rc1
+|   |   |   |-- CMakeConfigureLog.yaml
+|   |   |   |-- TargetDirectories.txt
+|   |   |   |-- app.dir
+|   |   |   |-- clean_additional.cmake
+|   |   |   |-- cmake.check_cache
+|   |   |   |-- d
+|   |   |   |-- guiconfig-0b59bc5.bat
+|   |   |   |-- hardenconfig-9a95698.bat
+|   |   |   |-- menuconfig-5f29641.bat
+|   |   |   |-- pkgRedirects
+|   |   |   `-- rules.ninja
+|   |   |-- Kconfig
+|   |   |   |-- Kconfig.modules
+|   |   |   |-- Kconfig.shield
+|   |   |   `-- Kconfig.shield.defconfig
+|   |   |-- app
+|   |   |   `-- libapp.a
+|   |   |-- build.ninja
+|   |   |-- child_image_preload.cmake
+|   |   |-- cmake_install.cmake
+|   |   |-- compile_commands.json
+|   |   |-- libspmsecureentries.a
+|   |   |-- modules
+|   |   |   |-- CANopenNode
+|   |   |   |-- TraceRecorder
+|   |   |   |-- cddl-gen
+|   |   |   |-- civetweb
+|   |   |   |-- cjson
+|   |   |   |-- cmsis
+|   |   |   |-- connectedhomeip
+|   |   |   |-- fatfs
+|   |   |   |-- hal_nordic
+|   |   |   |-- libmetal
+|   |   |   |-- littlefs
+|   |   |   |-- loramac-node
+|   |   |   |-- lvgl
+|   |   |   |-- lz4
+|   |   |   |-- mbedtls
+|   |   |   |-- mcuboot
+|   |   |   |-- memfault-firmware-sdk
+|   |   |   |-- mipi-sys-t
+|   |   |   |-- nanopb
+|   |   |   |-- nrf
+|   |   |   |-- nrf_hw_models
+|   |   |   |-- nrfxlib
+|   |   |   |-- open-amp
+|   |   |   |-- openthread
+|   |   |   |-- segger
+|   |   |   |-- st
+|   |   |   |-- tinycbor
+|   |   |   |-- tinycrypt
+|   |   |   |-- trusted-firmware-m
+|   |   |   `-- zscilib
+|   |   |-- shared_vars.cmake
+|   |   |-- zephyr
+|   |   |   |-- CMakeFiles
+|   |   |   |-- arch
+|   |   |   |-- boards
+|   |   |   |-- cmake
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- dev_handles.c
+|   |   |   |-- drivers
+|   |   |   |-- dts.cmake
+|   |   |   |-- edt.pickle
+|   |   |   |-- include
+|   |   |   |-- isrList.bin
+|   |   |   |-- isr_tables.c
+|   |   |   |-- kconfig
+|   |   |   |-- kernel
+|   |   |   |-- lib
+|   |   |   |-- libzephyr.a
+|   |   |   |-- linker.cmd
+|   |   |   |-- linker.cmd.dep
+|   |   |   |-- linker_zephyr_pre0.cmd
+|   |   |   |-- linker_zephyr_pre0.cmd.dep
+|   |   |   |-- linker_zephyr_pre1.cmd
+|   |   |   |-- linker_zephyr_pre1.cmd.dep
+|   |   |   |-- misc
+|   |   |   |-- runners.yaml
+|   |   |   |-- soc
+|   |   |   |-- subsys
+|   |   |   |-- zephyr.bin
+|   |   |   |-- zephyr.dts
+|   |   |   |-- zephyr.dts.d
+|   |   |   |-- zephyr.dts.pre
+|   |   |   |-- zephyr.elf
+|   |   |   |-- zephyr.hex
+|   |   |   |-- zephyr.lst
+|   |   |   |-- zephyr.map
+|   |   |   |-- zephyr.stat
+|   |   |   |-- zephyr_pre0.elf
+|   |   |   |-- zephyr_pre0.map
+|   |   |   |-- zephyr_pre1.elf
+|   |   |   `-- zephyr_pre1.map
+|   |   |-- zephyr_modules.txt
+|   |   `-- zephyr_settings.txt
+|   |-- zephyr
+|   |   |-- CMakeFiles
+|   |   |   |-- offsets.dir
+|   |   |   |-- zephyr.dir
+|   |   |   |-- zephyr_final.dir
+|   |   |   |-- zephyr_pre0.dir
+|   |   |   `-- zephyr_pre1.dir
+|   |   |-- app_moved_test_update.hex
+|   |   |-- app_signed.hex
+|   |   |-- app_test_update.hex
+|   |   |-- app_to_sign.bin
+|   |   |-- app_update.bin
+|   |   |-- arch
+|   |   |   |-- CMakeFiles
+|   |   |   |-- arch
+|   |   |   |-- cmake_install.cmake
+|   |   |   `-- common
+|   |   |-- boards
+|   |   |   |-- CMakeFiles
+|   |   |   |-- boards
+|   |   |   `-- cmake_install.cmake
+|   |   |-- cmake
+|   |   |   |-- flash
+|   |   |   |-- reports
+|   |   |   `-- usage
+|   |   |-- cmake_install.cmake
+|   |   |-- dev_handles.c
+|   |   |-- dfu_application.zip
+|   |   |-- dfu_application.zip_manifest.json
+|   |   |-- drivers
+|   |   |   |-- CMakeFiles
+|   |   |   |-- bluetooth
+|   |   |   |-- clock_control
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- console
+|   |   |   |-- disk
+|   |   |   |-- entropy
+|   |   |   |-- flash
+|   |   |   |-- gpio
+|   |   |   |-- i2c
+|   |   |   |-- interrupt_controller
+|   |   |   |-- misc
+|   |   |   |-- pcie
+|   |   |   |-- serial
+|   |   |   |-- spi
+|   |   |   |-- timer
+|   |   |   `-- usb
+|   |   |-- dts.cmake
+|   |   |-- edt.pickle
+|   |   |-- include
+|   |   |   `-- generated
+|   |   |-- isrList.bin
+|   |   |-- isr_tables.c
+|   |   |-- kconfig
+|   |   |   |-- include
+|   |   |   `-- sources.txt
+|   |   |-- kernel
+|   |   |   |-- CMakeFiles
+|   |   |   |-- cmake_install.cmake
+|   |   |   `-- libkernel.a
+|   |   |-- lib
+|   |   |   |-- CMakeFiles
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- gui
+|   |   |   |-- libc
+|   |   |   |-- os
+|   |   |   |-- posix
+|   |   |   `-- util
+|   |   |-- libzephyr.a
+|   |   |-- linker.cmd
+|   |   |-- linker.cmd.dep
+|   |   |-- linker_zephyr_pre0.cmd
+|   |   |-- linker_zephyr_pre0.cmd.dep
+|   |   |-- linker_zephyr_pre1.cmd
+|   |   |-- linker_zephyr_pre1.cmd.dep
+|   |   |-- mcuboot_primary.hex
+|   |   |-- mcuboot_primary_app.hex
+|   |   |-- merged.hex
+|   |   |-- misc
+|   |   |   `-- generated
+|   |   |-- runners.yaml
+|   |   |-- soc
+|   |   |   `-- arm
+|   |   |-- subsys
+|   |   |   |-- CMakeFiles
+|   |   |   |-- bluetooth
+|   |   |   |-- canbus
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- console
+|   |   |   |-- debug
+|   |   |   |-- fb
+|   |   |   |-- fs
+|   |   |   |-- ipc
+|   |   |   |-- logging
+|   |   |   |-- mgmt
+|   |   |   |-- modbus
+|   |   |   |-- net
+|   |   |   |-- pm
+|   |   |   |-- portability
+|   |   |   |-- random
+|   |   |   |-- settings
+|   |   |   |-- stats
+|   |   |   |-- storage
+|   |   |   |-- task_wdt
+|   |   |   |-- testsuite
+|   |   |   `-- tracing
+|   |   |-- zephyr.bin
+|   |   |-- zephyr.dts
+|   |   |-- zephyr.dts.d
+|   |   |-- zephyr.dts.pre
+|   |   |-- zephyr.elf
+|   |   |-- zephyr.hex
+|   |   |-- zephyr.lst
+|   |   |-- zephyr.map
+|   |   |-- zephyr.meta
+|   |   |-- zephyr.stat
+|   |   |-- zephyr_pre0.elf
+|   |   |-- zephyr_pre0.map
+|   |   |-- zephyr_pre1.elf
+|   |   `-- zephyr_pre1.map
+|   |-- zephyr_modules.txt
+|   `-- zephyr_settings.txt
+|-- hci_lpuart
+|   |-- CMakeLists.txt
+|   |-- README.rst
+|   |-- boards
+|   |   |-- nrf9160dk_nrf52840.conf
+|   |   |-- nrf9160dk_nrf52840.overlay
+|   |   |-- nrf9160dk_nrf52840_0_14_0.overlay
+|   |   |-- thingy91_nrf52840.conf
+|   |   `-- thingy91_nrf52840.overlay
+|   |-- build
+|   |   `-- zephyr
+|   |       `-- soc
+|   |-- debug.conf
+|   |-- prj.conf
+|   `-- sample.yaml
+|-- instructions push certificate to modem u.md
+|-- lte_ble_gateway
+|   |-- CMakeLists.txt
+|   |-- Kconfig
+|   |-- README.rst
+|   |-- boards
+|   |   |-- nrf9160dk_nrf9160_ns.conf
+|   |   |-- nrf9160dk_nrf9160_ns.overlay
+|   |   |-- nrf9160dk_nrf9160_ns_0_14_0.overlay
+|   |   |-- thingy91_nrf9160_ns.conf
+|   |   `-- thingy91_nrf9160_ns.overlay
+|   |-- build
+|   |   |-- CMakeCache.txt
+|   |   |-- CMakeFiles
+|   |   |   |-- 3.20.5
+|   |   |   |-- CMakeError.log
+|   |   |   |-- CMakeOutput.log
+|   |   |   |-- TargetDirectories.txt
+|   |   |   |-- app.dir
+|   |   |   |-- clean_additional.cmake
+|   |   |   |-- cmake.check_cache
+|   |   |   |-- d
+|   |   |   |-- guiconfig-0b59bc5.bat
+|   |   |   |-- hardenconfig-9a95698.bat
+|   |   |   |-- menuconfig-5f29641.bat
+|   |   |   `-- rules.ninja
+|   |   |-- Kconfig
+|   |   |   |-- Kconfig.modules
+|   |   |   |-- Kconfig.shield
+|   |   |   `-- Kconfig.shield.defconfig
+|   |   |-- app
+|   |   |   `-- libapp.a
+|   |   |-- build.ninja
+|   |   |-- cmake_install.cmake
+|   |   |-- compile_commands.json
+|   |   |-- image_preload.cmake
+|   |   |-- mcuboot
+|   |   |   |-- CMakeCache.txt
+|   |   |   |-- CMakeFiles
+|   |   |   |-- Kconfig
+|   |   |   |-- app
+|   |   |   |-- build.ninja
+|   |   |   |-- child_image_preload.cmake
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- compile_commands.json
+|   |   |   |-- modules
+|   |   |   |-- shared_vars.cmake
+|   |   |   |-- zephyr
+|   |   |   |-- zephyr_modules.txt
+|   |   |   `-- zephyr_settings.txt
+|   |   |-- modules
+|   |   |   |-- CANopenNode
+|   |   |   |-- TraceRecorder
+|   |   |   |-- cddl-gen
+|   |   |   |-- civetweb
+|   |   |   |-- cjson
+|   |   |   |-- cmsis
+|   |   |   |-- connectedhomeip
+|   |   |   |-- fatfs
+|   |   |   |-- hal_nordic
+|   |   |   |-- libmetal
+|   |   |   |-- littlefs
+|   |   |   |-- loramac-node
+|   |   |   |-- lvgl
+|   |   |   |-- lz4
+|   |   |   |-- mbedtls
+|   |   |   |-- mcuboot
+|   |   |   |-- memfault-firmware-sdk
+|   |   |   |-- mipi-sys-t
+|   |   |   |-- nanopb
+|   |   |   |-- nrf
+|   |   |   |-- nrf_hw_models
+|   |   |   |-- nrfxlib
+|   |   |   |-- open-amp
+|   |   |   |-- openthread
+|   |   |   |-- segger
+|   |   |   |-- st
+|   |   |   |-- tinycbor
+|   |   |   |-- tinycrypt
+|   |   |   |-- trusted-firmware-m
+|   |   |   `-- zscilib
+|   |   |-- partitions.yml
+|   |   |-- pm.config
+|   |   |-- regions.yml
+|   |   |-- spm
+|   |   |   |-- CMakeCache.txt
+|   |   |   |-- CMakeFiles
+|   |   |   |-- Kconfig
+|   |   |   |-- app
+|   |   |   |-- build.ninja
+|   |   |   |-- child_image_preload.cmake
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- compile_commands.json
+|   |   |   |-- libspmsecureentries.a
+|   |   |   |-- modules
+|   |   |   |-- shared_vars.cmake
+|   |   |   |-- zephyr
+|   |   |   |-- zephyr_modules.txt
+|   |   |   `-- zephyr_settings.txt
+|   |   |-- zephyr
+|   |   |   |-- CMakeFiles
+|   |   |   |-- app_moved_test_update.hex
+|   |   |   |-- app_signed.hex
+|   |   |   |-- app_test_update.hex
+|   |   |   |-- app_to_sign.bin
+|   |   |   |-- app_update.bin
+|   |   |   |-- arch
+|   |   |   |-- boards
+|   |   |   |-- cmake
+|   |   |   |-- cmake_install.cmake
+|   |   |   |-- dev_handles.c
+|   |   |   |-- dfu_application.zip
+|   |   |   |-- dfu_application.zip_manifest.json
+|   |   |   |-- drivers
+|   |   |   |-- dts.cmake
+|   |   |   |-- edt.pickle
+|   |   |   |-- include
+|   |   |   |-- isrList.bin
+|   |   |   |-- isr_tables.c
+|   |   |   |-- kconfig
+|   |   |   |-- kernel
+|   |   |   |-- lib
+|   |   |   |-- libzephyr.a
+|   |   |   |-- linker.cmd
+|   |   |   |-- linker.cmd.dep
+|   |   |   |-- linker_zephyr_pre0.cmd
+|   |   |   |-- linker_zephyr_pre0.cmd.dep
+|   |   |   |-- linker_zephyr_pre1.cmd
+|   |   |   |-- linker_zephyr_pre1.cmd.dep
+|   |   |   |-- mcuboot_primary.hex
+|   |   |   |-- mcuboot_primary_app.hex
+|   |   |   |-- merged.hex
+|   |   |   |-- misc
+|   |   |   |-- runners.yaml
+|   |   |   |-- soc
+|   |   |   |-- subsys
+|   |   |   |-- zephyr.bin
+|   |   |   |-- zephyr.dts
+|   |   |   |-- zephyr.dts.d
+|   |   |   |-- zephyr.dts.pre
+|   |   |   |-- zephyr.elf
+|   |   |   |-- zephyr.hex
+|   |   |   |-- zephyr.lst
+|   |   |   |-- zephyr.map
+|   |   |   |-- zephyr.meta
+|   |   |   |-- zephyr.stat
+|   |   |   |-- zephyr_pre0.elf
+|   |   |   |-- zephyr_pre0.map
+|   |   |   |-- zephyr_pre1.elf
+|   |   |   `-- zephyr_pre1.map
+|   |   |-- zephyr_modules.txt
+|   |   `-- zephyr_settings.txt
+|   |-- cert
+|   |   `-- DigiCertGlobalRootCA.pem
+|   |-- debug.config.conf
+|   |-- prj.conf
+|   |-- sample.yaml
+|   |-- spm.conf
+|   `-- src
+|       |-- aggregator.c
+|       |-- aggregator.h
+|       |-- alarm.c
+|       |-- alarm.h
+|       |-- battery.c
+|       |-- battery.h
+|       |-- ble.c
+|       |-- ble.h
+|       |-- button.c
+|       |-- button.h
+|       |-- buzzer.c
+|       |-- buzzer.h
+|       |-- certificates.h
+|       |-- clock.c
+|       |-- clock.h
+|       |-- fs.c
+|       |-- fs.h
+|       |-- led.c
+|       |-- led.h
+|       |-- listing.c
+|       |-- listing.h
+|       |-- low_power.c
+|       |-- low_power.h
+|       |-- lte.c
+|       |-- lte.h
+|       |-- main.c
+|       |-- modemSetup.h
+|       |-- services.c
+|       `-- services.h
+|-- manuf_install
+|   |-- CONTENTS.txt
+|   |-- img_app_bl
+|   |   |-- debug
+|   |   |   |-- thingy91_asset_tracker_v2_debug_ltem_2022-06-02_880c82db.hex
+|   |   |   |-- thingy91_asset_tracker_v2_debug_nbiot_2022-06-02_880c82db.hex
+|   |   |   `-- thingy91_asset_tracker_v2_debug_nbiot_legacy_pco_2022-06-02_880c82db.hex
+|   |   |-- serial_lte_modem_2022-06-02_880c82db.hex
+|   |   |-- thingy91_asset_tracker_v2_ltem_2022-06-02_880c82db.hex
+|   |   |-- thingy91_asset_tracker_v2_nbiot_2022-06-02_880c82db.hex
+|   |   |-- thingy91_asset_tracker_v2_nbiot_legacy_pco_2022-06-02_880c82db.hex
+|   |   |-- thingy91_at_client_2022-06-02_880c82db.hex
+|   |   `-- thingy91_nrf52_connectivity_bridge_2022-06-02_880c82db.hex
+|   |-- img_fota_dfu_bin
+|   |   |-- debug
+|   |   |   |-- thingy91_asset_tracker_v2_debug_ltem_2022-06-02_880c82db.bin
+|   |   |   |-- thingy91_asset_tracker_v2_debug_nbiot_2022-06-02_880c82db.bin
+|   |   |   `-- thingy91_asset_tracker_v2_debug_nbiot_legacy_pco_2022-06-02_880c82db.bin
+|   |   |-- serial_lte_modem_2022-06-02_880c82db.bin
+|   |   |-- thingy91_asset_tracker_v2_ltem_2022-06-02_880c82db.bin
+|   |   |-- thingy91_asset_tracker_v2_nbiot_2022-06-02_880c82db.bin
+|   |   |-- thingy91_asset_tracker_v2_nbiot_legacy_pco_2022-06-02_880c82db.bin
+|   |   |-- thingy91_at_client_2022-06-02_880c82db.bin
+|   |   `-- thingy91_nrf52_connectivity_bridge_2022-06-02_880c82db.bin
+|   |-- img_fota_dfu_hex
+|   |   |-- debug
+|   |   |   |-- thingy91_asset_tracker_v2_debug_ltem_2022-06-02_880c82db.hex
+|   |   |   |-- thingy91_asset_tracker_v2_debug_nbiot_2022-06-02_880c82db.hex
+|   |   |   `-- thingy91_asset_tracker_v2_debug_nbiot_legacy_pco_2022-06-02_880c82db.hex
+|   |   |-- serial_lte_modem_2022-06-02_880c82db.hex
+|   |   |-- thingy91_asset_tracker_v2_ltem_2022-06-02_880c82db.hex
+|   |   |-- thingy91_asset_tracker_v2_nbiot_2022-06-02_880c82db.hex
+|   |   |-- thingy91_asset_tracker_v2_nbiot_legacy_pco_2022-06-02_880c82db.hex
+|   |   |-- thingy91_at_client_2022-06-02_880c82db.hex
+|   |   `-- thingy91_nrf52_connectivity_bridge_2022-06-02_880c82db.hex
+|   `-- mfw_nrf9160_1.3.2.zip
+|-- modemSetup.h
+`-- tree_output.txt
+
+345 directories, 364 files

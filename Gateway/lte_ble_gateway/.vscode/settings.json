@@ -1,0 +1,12 @@
+{
+  "nrf-connect.topdir": "/opt/nordic/ncs/v1.9.1",
+  "nrf-connect.toolchain.path": "/opt/nordic/ncs/v1.9.1/toolchain",
+  "nrf-connect.applications": [
+    "/Users/zeevj/oldbmp_2017/rsyncing/projects/tobe/tobe_gate/testNordic/lte_ble_gateway"
+  ],
+  "files.associations": {
+    "functional": "c",
+    "console.h": "c",
+    "nrf_cloud.h": "c"
+  }
+}

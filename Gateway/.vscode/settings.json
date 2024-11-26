@@ -1,0 +1,41 @@
+{
+	"nrf-connect.applications": [
+		"${workspaceFolder}\\lte_ble_gateway",
+		"${workspaceFolder}\\hci_lpuart"
+	],
+	"files.associations": {
+		"gatt.h": "c",
+		"array": "c",
+		"string": "c",
+		"string_view": "c",
+		"nus.h": "c",
+		"device.h": "c",
+		"reboot.h": "c",
+		"initializer_list": "c",
+		"utility": "c",
+		"nvs.h": "c",
+		"flash.h": "c",
+		"nrf_modem_lib.h": "c",
+		"SOCKET.H": "cpp",
+		"cerrno": "c",
+		"zephyr.h": "c",
+		"modem_info.h": "c",
+		"aggregator.h": "c",
+		"gps.h": "c",
+		"uuid.h": "c",
+		"battery.h": "c",
+		"lte.h": "c",
+		"types.h": "c",
+		"at_cmd_parser.h": "c",
+		"button.h": "c",
+		"nrfx_spis.h": "c",
+		"bluetooth.h": "c",
+		"util.h": "c",
+		"printk.h": "c",
+		"hci.h": "c",
+		"led.h": "c"
+	},
+	"nrf-connect.topdir": "${nrf-connect.sdk:1.9.0}",
+	"nrf-connect.toolchain.path": "${nrf-connect.toolchain:1.9.0}",
+	"cmake.sourceDirectory": "${workspaceFolder}/lte_ble_gateway"
+}
