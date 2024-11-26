@@ -1,6 +1,6 @@
 {
     "format-version": 0,
-    "time": 1732556120,
+    "time": 1732626240,
     "files": [
         {
             "load_address": 74240,
@@ -10,7 +10,7 @@
             "soc": "nRF52840_QIAA",
             "size": 171108,
             "file": "app_update.bin",
-            "modtime": 1732556120
+            "modtime": 1732626240
         }
     ],
     "name": "hci_lpuart",
