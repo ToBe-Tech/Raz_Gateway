@@ -1,0 +1,13 @@
+# Target labels
+ spm_subimage
+# Source files and their labels
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/CMakeFiles/spm_subimage
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/CMakeFiles/spm_subimage.rule
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/CMakeFiles/spm_subimage-complete.rule
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-build.rule
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-configure.rule
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-download.rule
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-install.rule
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-mkdir.rule
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-patch.rule
+C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/modules/nrf/samples/spm_subimage-prefix/src/spm_subimage-stamp/spm_subimage-update.rule

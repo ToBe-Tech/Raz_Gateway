@@ -1,0 +1,156 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/app/boilerplate.cmake:591 (project)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:24 (include)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:35 (include_boilerplate)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      The target system is: Generic - 2.7.99 - arm
+      The host system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/app/boilerplate.cmake:591 (project)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:24 (include)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:35 (include_boilerplate)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      c:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.exe: c:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib\\libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x34): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/app/boilerplate.cmake:591 (project)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:24 (include)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:35 (include_boilerplate)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/spm/CMakeFiles/3.29.0-rc1/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/app/boilerplate.cmake:591 (project)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:24 (include)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:35 (include_boilerplate)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      c:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.exe: c:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/lib\\libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x34): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/app/boilerplate.cmake:591 (project)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:24 (include)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:35 (include_boilerplate)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/spm/CMakeFiles/3.29.0-rc1/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:1141 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineASMCompiler.cmake:135 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/app/boilerplate.cmake:597 (enable_language)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:24 (include)"
+      - "C:/ncs/v1.9.0/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:35 (include_boilerplate)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.16.5) 12.2.0
+      Copyright (C) 2022 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/extensions.cmake:1792 (check_c_compiler_flag)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/extensions.cmake:1081 (check_compiler_flag)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/extensions.cmake:1853 (zephyr_check_compiler_flag)"
+      - "C:/ncs/v1.9.0/zephyr/cmake/extensions.cmake:131 (target_ld_options)"
+      - "C:/ncs/v1.9.0/zephyr/arch/arm/core/aarch32/cortex_m/tz/CMakeLists.txt:14 (zephyr_ld_options)"
+    directories:
+      source: "C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/spm/CMakeFiles/CMakeScratch/TryCompile-mzt43s"
+      binary: "C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/spm/CMakeFiles/CMakeScratch/TryCompile-mzt43s"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "check_C__nostartfiles__nostdlib__isystem__c__ncs_toolchains_cf2149caf2_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_cf2149caf2_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___out_implib_C__ncs_v1_9_0_nrf_samples_my_samples_Raz_GateWay_build_blinky_spm_libspmsecureentries_a"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/spm/CMakeFiles/CMakeScratch/TryCompile-mzt43s'
+        
+        Run Build Command(s): C:/ncs/toolchains/cf2149caf2/opt/bin/ninja.exe -v cmTC_582ce
+        [1/2] C:\\ncs\\toolchains\\cf2149caf2\\opt\\zephyr-sdk\\arm-zephyr-eabi\\bin\\arm-zephyr-eabi-gcc.exe -Dcheck_C__nostartfiles__nostdlib__isystem__c__ncs_toolchains_cf2149caf2_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_cf2149caf2_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___out_implib_C__ncs_v1_9_0_nrf_samples_my_samples_Raz_GateWay_build_blinky_spm_libspmsecureentries_a  -nostartfiles -nostdlib -isystem "c:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "c:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -Wl,--out-implib=C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/spm/libspmsecureentries.a -o CMakeFiles/cmTC_582ce.dir/src.c.obj -c C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/spm/CMakeFiles/CMakeScratch/TryCompile-mzt43s/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\ncs\\toolchains\\cf2149caf2\\opt\\zephyr-sdk\\arm-zephyr-eabi\\bin\\arm-zephyr-eabi-gcc.exe -nostartfiles -nostdlib -isystem "c:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include" -isystem "c:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--entry=0 -Wl,--out-implib=C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/build_blinky/spm/libspmsecureentries.a  CMakeFiles/cmTC_582ce.dir/src.c.obj -o cmTC_582ce   && cd ."
+        
+      exitCode: 0
+...
