@@ -7347,9 +7347,9 @@
 #define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_PINCTRL_NUM 0
 
 /* Generic property macros: */
-#define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_P_req_pin 22
+#define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_P_req_pin 15
 #define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_P_req_pin_EXISTS 1
-#define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_P_rdy_pin 19
+#define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_P_rdy_pin 22
 #define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_P_rdy_pin_EXISTS 1
 #define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_P_label "LPUART"
 #define DT_N_S_soc_S_uart_40028000_S_nrf_sw_lpuart_P_label_STRING_TOKEN LPUART

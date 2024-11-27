@@ -385,8 +385,8 @@
 				compatible = "nordic,nrf-sw-lpuart";
 				status = "okay";
 				label = "LPUART";
-				req-pin = < 0x16 >;
-				rdy-pin = < 0x13 >;
+				req-pin = < 0xf >;
+				rdy-pin = < 0x16 >;
 			};
 		};
 		qspi: qspi@40029000 {

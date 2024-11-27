@@ -20,8 +20,8 @@ APPLICATION_BINARY_DIR:PATH=C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/bui
 //Application Source Directory
 APPLICATION_SOURCE_DIR:PATH=C:/ncs/v1.9.0/nrf/samples/my_samples/Raz_GateWay/Gateway/hci_lpuart
 
-//No help, variable specified on the command line.
-BOARD:UNINITIALIZED=thingy91_nrf52840
+//Selected board
+BOARD:STRING=thingy91_nrf52840
 
 //Path to a file.
 BOARD_DIR:PATH=C:/ncs/v1.9.0/nrf/boards/arm/thingy91_nrf52840
@@ -112,8 +112,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//C compiler
-CMAKE_C_COMPILER:STRING=C:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe
+//Path to a program.
+CMAKE_C_COMPILER:FILEPATH=C:/ncs/toolchains/cf2149caf2/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -471,8 +471,6 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER
-CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
 CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
@@ -594,6 +592,8 @@ _Python3_EXECUTABLE:INTERNAL=C:/ncs/toolchains/cf2149caf2/opt/bin/python.exe
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;13;64;;cp39-win_amd64.pyd;;C:\ncs\toolchains\cf2149caf2\opt\bin\Lib;C:\ncs\toolchains\cf2149caf2\opt\bin\Lib;C:\ncs\toolchains\cf2149caf2\opt\bin\Lib\site-packages;C:\ncs\toolchains\cf2149caf2\opt\bin\Lib\site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=1a498c04fa8e1d4e077dd9c05b0142ec
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

@@ -699,9 +699,6 @@ zephyr_udc0: &usbd {
 
 &uart1 {
  current-speed = <1000000>;
- status = "okay";
- tx-pin = <25>;
- rx-pin = <32>;
  /delete-property/ rts-pin;
  /delete-property/ cts-pin;
 
@@ -709,8 +706,8 @@ zephyr_udc0: &usbd {
   compatible = "nordic,nrf-sw-lpuart";
   status = "okay";
   label = "LPUART";
-  req-pin = <22>;
-  rdy-pin = <19>;
+  req-pin = <15>;
+  rdy-pin = <22>;
  };
 };
 

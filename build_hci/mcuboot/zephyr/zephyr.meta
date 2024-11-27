@@ -1,7 +1,7 @@
 modules:
 - name: nrf
   path: C:/ncs/v1.9.0/nrf
-  revision: ec486dab95df9d142a65000b0412b85e5ca5973c
+  revision: ec486dab95df9d142a65000b0412b85e5ca5973c-dirty
 - name: mcuboot
   path: C:/ncs/v1.9.0/bootloader/mcuboot
   revision: 17f6d045a10a8d2ba9f3dede820e9c6dd81a5c56
@@ -105,7 +105,7 @@ west:
   manifest: C:\ncs\v1.9.0\nrf\west.yml
   projects:
   - path: C:/ncs/v1.9.0/nrf
-    revision: ec486dab95df9d142a65000b0412b85e5ca5973c
+    revision: ec486dab95df9d142a65000b0412b85e5ca5973c-dirty
   - path: C:/ncs/v1.9.0/zephyr
     revision: a4edab554f67590a89703067af703c7996604562
   - path: C:/ncs/v1.9.0/bootloader/mcuboot
