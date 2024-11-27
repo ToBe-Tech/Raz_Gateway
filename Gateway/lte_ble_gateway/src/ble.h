@@ -22,7 +22,6 @@ typedef struct {
 void ble_init(void);
 void ble_scan_stop();
 void ble_scan_start(void);
-void ble_scan_start(void);
 void adv_work_handler(void);
 void ble_advertise_time(uint32_t adv_time);
 void ble_advertise_battery(void);

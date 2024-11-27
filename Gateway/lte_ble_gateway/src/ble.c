@@ -41,8 +41,6 @@ extern bool time_paused;
 
 bool peripheral = true;
 
-
-
 #define MFG_DATA_SIZE 15
 
 
@@ -372,41 +370,104 @@ void add_data_to_diagnostics_adv(uint8_t * new_data, uint8_t ind){
 
 }
 
-void add_to_payload(struct bt_scan_device_info *device_info, uint8_t * addr, char *p_addr){
+// Add this function before add_to_payload()
+void print_device_data(uint8_t *data, char *addr) {
+    printk("\n=== Device %s Data ===\n", addr);
+    
+    // Print firmware version (bytes 17-20)
+    printk("Firmware Version: %02x%02x%02x%02x\n", 
+           data[17], data[18], data[19], data[20]);
+    
+    // Print DDC flag (byte 21)
+    printk("DDC Flag: %02x\n", data[21]);
+    
+    // Print Device ID (bytes 22-25)
+    printk("Device ID: %02x%02x%02x%02x\n", 
+           data[22], data[23], data[24], data[25]);
+    
+    // Print Hive ID (bytes 26-33)
+    printk("Hive ID: ");
+    for(int i = 26; i < 34; i++) {
+        printk("%02x", data[i]);
+    }
+    printk("\n");
 
-	
-	bool device_exists = false;
-	    //search for device which already exists in the payload
-		for (int i = 0; i < adv_count; i++) {
-			if (memcmp(device_adv[i].mac_addr, addr,6U)==0) {
-				device_exists = true;			
-				break;
-			}
-		}
-		
-		if(device_exists == true) return;
+    // Print success rate, corrections, events
+    printk("Success Rate: %d%%\n", data[36]);
+    printk("Corrections: %d\n", data[37]);
+    printk("Events: %d\n", data[38]);
+    
+    // Print temperatures
+    printk("Temperatures:\n");
+    printk("  Hive: %d.%d°C\n", data[50], data[51]);
+    printk("  Chamber: %d.%d°C\n", data[52], data[53]);
+    printk("  Board: %d.%d°C\n", data[54], data[55]);
+    
+    // Print batteries and deltas
+    printk("Batteries: %d, %d, %d, %d\n", 
+           data[98], data[100], data[102], data[104]);
+    printk("Deltas: %d, %d, %d, %d\n", 
+           data[99], data[101], data[103], data[105]);
+    
+    // Diagnostic data
+    printk("\nDiagnostics:\n");
+    printk("  Fans:\n");
+    printk("    Big: %d RPM (Valid: %d)\n", data[85], data[86]);
+    printk("    Small: %d RPM (Valid: %d)\n", data[87], data[88]);
+    printk("  Solar Panel: %d\n", data[89]);
+    printk("  Battery: %d%%\n", data[90]);
+    printk("  Ignition Status: %d\n", data[91]);
+    printk("  Sensors Status: %d\n", data[92]);
+    
+    printk("==================\n\n");
+}
 
+// Modify add_to_payload() to include the print
+void add_to_payload(struct bt_scan_device_info *device_info, uint8_t * addr, char *p_addr) {
+    bool device_exists = false;
+    
+    // Print raw data first
+    printk("\nReceived advertisement from: %s\n", p_addr);
+    printk("Raw data (%d bytes):\n", device_info->adv_data->len);
+    for(int i = 0; i < device_info->adv_data->len; i++) {
+        printk("%02x ", device_info->adv_data->data[i]);
+        if((i + 1) % 16 == 0) printk("\n");
+    }
+    printk("\n");
+    
+    // Print parsed data
+    print_device_data(device_info->adv_data->data, p_addr);
 
-		//replace with memcpy
-		for (int i=0; i<6; i++){
-				device_adv[adv_count].mac_addr[i] = addr[i];
-			}
+    // Rest of your existing add_to_payload code...
+    //search for device which already exists in the payload
+    for (int i = 0; i < adv_count; i++) {
+        if (memcmp(device_adv[i].mac_addr, addr, 6U) == 0) {
+            device_exists = true;            
+            break;
+        }
+    }
+    
+    if(device_exists == true) return;
 
-		if (m_treatment.send) connect_and_write(device_info, &p_addr);
-		else{
-			add_data_to_ignition_adv(device_info->adv_data->data,adv_count);
-			listings_count++;
-			add_data_to_periodic_morning_adv(device_info->adv_data->data,adv_count);
-			listings_count++;
-			add_data_to_diagnostics_adv(device_info->adv_data->data,adv_count);
-			listings_count++;
-			add_data_to_cartridge_adv(device_info->adv_data->data,adv_count);
-			listings_count++;
-		}
-		
-		adv_count++;
+    //replace with memcpy
+    for (int i = 0; i < 6; i++) {
+        device_adv[adv_count].mac_addr[i] = addr[i];
+    }
 
-
+    if (m_treatment.send) {
+        connect_and_write(device_info, &p_addr);
+    } else {
+        add_data_to_ignition_adv(device_info->adv_data->data, adv_count);
+        listings_count++;
+        add_data_to_periodic_morning_adv(device_info->adv_data->data, adv_count);
+        listings_count++;
+        add_data_to_diagnostics_adv(device_info->adv_data->data, adv_count);
+        listings_count++;
+        add_data_to_cartridge_adv(device_info->adv_data->data, adv_count);
+        listings_count++;
+    }
+    
+    adv_count++;
 }
 
 void connect_and_write(struct bt_scan_device_info *device_info, char * addr)
@@ -615,43 +676,39 @@ BT_CONN_CB_DEFINE(conn_callbacks) = {
 	.disconnected = disconnected,
 };
 
-static void scan_init(void)
-{
-	int err;
+static void scan_init(void) {
+    int err;
+    
+    struct bt_le_scan_param scan_param = {
+        .type = BT_LE_SCAN_TYPE_ACTIVE,
+        .options = BT_LE_SCAN_OPT_NONE,
+        .interval = BT_GAP_SCAN_FAST_INTERVAL,
+        .window = BT_GAP_SCAN_FAST_WINDOW
+    };
 
-	/* Use active scanning and disable duplicate filtering to handle any
-	 * devices that might update their advertising data at runtime. */
-	struct bt_le_scan_param scan_param = {
-		.type     = BT_LE_SCAN_TYPE_ACTIVE,
-		.interval = BT_GAP_SCAN_FAST_INTERVAL,
-		.window   = BT_GAP_SCAN_FAST_WINDOW,
-		.options  = BT_LE_SCAN_OPT_CODED | BT_LE_SCAN_OPT_NO_1M
-	};
+    struct bt_scan_init_param scan_init = {
+        .scan_param = &scan_param,
+        .connect_if_match = false,
+        .conn_param = NULL
+    };
 
-	struct bt_scan_init_param scan_init = {
-		.connect_if_match = 0,
-		.scan_param = &scan_param,
-		.conn_param = NULL
-	};
-
-	bt_scan_init(&scan_init);
-	bt_scan_cb_register(&scan_cb);
-// #define DEVICE_NAME 0x54
+    bt_scan_init(&scan_init);
 
 
-	err = bt_scan_filter_add(BT_SCAN_FILTER_TYPE_UUID, BT_TOBE_DFU);
-	if (err) {
-		printk("Scanning filters cannot be set (err %d)\n", err);
+    bt_scan_cb_register(&scan_cb);
 
-		return;
-	}
+    err = bt_scan_filter_add(BT_SCAN_FILTER_TYPE_UUID, BT_TOBE_DFU);
+    if (err) {
+        printk("UUID filter add failed (err %d)\n", err);
+        return;
+    }
 
-	err = bt_scan_filter_enable(BT_SCAN_UUID_FILTER, false);
-	if (err) {
-		printk("Filters cannot be turned on (err %d)\n", err);
-	}
+    err = bt_scan_filter_enable(BT_SCAN_UUID_FILTER, false);
+    if (err) {
+        printk("Filter enable failed (err %d)\n", err);
+        return;
+    }
 }
-
 
 
 void adv_work_handler(void){
@@ -837,65 +894,82 @@ void ble_restart_adv(void){
 	}
 }
 
-void ble_init(void)
+#include <zephyr.h>
+
+// Add at the top with other static variables
+static K_SEM_DEFINE(ble_init_ok, 0, 1);
+
+static void bt_ready(void)
 {
-	compiling_adv = false;
-	m_treatment.send = false;
-	// peripheral = false;
-	m_ble_conn_handler.connected = false;
-	m_ble_conn_handler.is_pm = false;
-	int err;
-	err = bt_enable(NULL);
-	if (err) {
-		printk("Bluetooth init failed (err %d)\n", err);
-		return;
-	}
-
-	if (err) {
-		printk("Blueooth failed to initialize (err %d)\n", err);
-		return;
-	}
-	printk("Bluetooth initialized\n");
-	 uint8_t mac_address[6];
-    get_mac_address(mac_address);
-	//save mac to nvs
-	nvs_write_mac(mac_address);
-
-	printk("MAC address: %02x:%02x:%02x:%02x:%02x:%02x\n",
-           mac_address[0], mac_address[1], mac_address[2],
-           mac_address[3], mac_address[4], mac_address[5]);
-	scan_init();
-
-
-	//TODO retrieve registration state from flash.
-	// if registered, advertise registered 
-	// if not registered, advertise unregistered
-
-	uint8_t post_flag = nvs_read_post_flag();
-	if (post_flag){
-		pause_clock();
-		k_work_schedule(&send_post_work, Z_TIMEOUT_MS(HTTP_DELAY_TIME));
-	}
-	else{
-		// start BLE 4 adv
-		err = bt_le_adv_start(BT_LE_ADV_CONN, ad, ARRAY_SIZE(ad),
-					sd, ARRAY_SIZE(sd));
-		if (err) {
-			printk("Advertising failed to start (err %d)\n", err);
-			// return;
-		}
-		enter_low_power();
-		//read listings length
-		uint16_t len = nvs_read_listings_len();
-		if (len) {
-			printk("data exists, setting adv data flag\n");
-			ble_set_adv_data_flag(0x01);
-		}
-
-		
-	}
-
-	k_work_init_delayable(&adv_data_flag_work, adv_data_flag);
-	k_work_init_delayable(&treatment_send_work, treatment_work_handler);
+    printk("Bluetooth ready\n");
+    k_sem_give(&ble_init_ok);
 }
 
+void ble_init(void)
+{
+    printk("Starting BLE initialization\n");
+    
+    // Initialize variables
+    compiling_adv = false;
+    m_treatment.send = false;
+    m_ble_conn_handler.connected = false;
+    m_ble_conn_handler.is_pm = false;
+
+    // Add delay before BT initialization
+    k_sleep(K_MSEC(100));
+
+    int err = bt_enable(bt_ready);
+    if (err) {
+        printk("Bluetooth init failed (err %d)\n", err);
+        return;
+    }
+
+    // Wait for Bluetooth initialization to complete with timeout
+    err = k_sem_take(&ble_init_ok, K_MSEC(5000));
+    if (err) {
+        printk("Bluetooth initialization timeout (err %d)\n", err);
+        return;
+    }
+
+    printk("Bluetooth initialized successfully\n");
+
+    // Initialize scan parameters
+    scan_init();
+    printk("Scan initialized\n");
+
+    // Get and store MAC address
+    uint8_t mac_address[6];
+    get_mac_address(mac_address);
+    err = nvs_write_mac(mac_address);
+    if (err) {
+        printk("Failed to write MAC address\n");
+    }
+
+    // Check post flag and start appropriate mode
+    uint8_t post_flag = nvs_read_post_flag();
+    if (post_flag) {
+        pause_clock();
+        k_work_schedule(&send_post_work, Z_TIMEOUT_MS(HTTP_DELAY_TIME));
+    } else {
+        struct bt_le_adv_param param = BT_LE_ADV_PARAM_INIT(
+            BT_LE_ADV_OPT_CONNECTABLE,
+            BT_GAP_ADV_FAST_INT_MIN_2,
+            BT_GAP_ADV_FAST_INT_MAX_2,
+            NULL);
+
+        err = bt_le_adv_start(&param, ad, ARRAY_SIZE(ad),
+                             sd, ARRAY_SIZE(sd));
+        if (err) {
+            printk("Advertising failed to start (err %d)\n", err);
+            return;
+        }
+        printk("Advertising started successfully\n");
+        
+        enter_low_power();
+        uint16_t len = nvs_read_listings_len();
+        if (len) {
+            printk("Data exists, setting adv data flag\n");
+            ble_set_adv_data_flag(0x01);
+        }
+    }
+}
